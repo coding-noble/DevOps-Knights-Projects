@@ -91,22 +91,82 @@ a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 180px;
 }
+/* Added Header Style, Change as Needed - Mike */
+.header {
+  grid-row-start: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--gray-alpha-200);
+  border-bottom: 1px solid var(--gray-alpha-100);
+}
 
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.header .nav {
+  display: flex;
+  gap: 16px;
+}
+
+.header .nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--foreground, #000);
+  transition: color 0.2s ease;
+}
+
+.header .nav a:hover {
+  color: var(--button-primary-hover, #383838);
+}
+/* End Header Style*
+/* Edited Footer Style, Change as Needed - Mike */
 .footer {
   grid-row-start: 3;
   display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  background-color: var(--gray-alpha-200);
+  padding: 16px;
+  border-top: 1px solid var(--gray-alpha-100);
 }
 
-.footer img {
-  flex-shrink: 0;
+.footer p {
+  font-size: 14px;
+  color: var(--gray-alpha-100);
 }
+
+.footer .socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .socialLinks a {
+  color: var(--foreground, #000);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer .socialLinks a:hover {
+  color: var(--button-primary-hover, #383838);
+}
+/*End Footer Style - Mike*/
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
