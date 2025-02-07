@@ -1,6 +1,7 @@
 {
     "items": [
         {
+            "id": "1",
             "name": "Silver-Plated Fork and Spoon Set",
             "category": "Metalworking",
             "description": "Handcrafted silver-plated fork and spoon set with intricate floral engravings. Ideal for adding elegance to any dining table.",
@@ -9,6 +10,7 @@
             "creator": "Emily Carter"
         },
         {
+            "id": "2",
             "name": "Hand-Stitched Leather Book Cover",
             "category": "Leatherworking",
             "description": "Premium leather book cover featuring hand-tooled designs and custom initials. Fits most standard-sized books and journals.",
@@ -17,6 +19,7 @@
             "creator": "Daniel Rivera"
         },
         {
+            "id": "3",
             "name": "Hand-Carved Wooden Bear Sculpture",
             "category": "Woodworking",
             "description": "A lifelike bear sculpture crafted from reclaimed cherry wood, showcasing fine details and a smooth finish.",
@@ -25,6 +28,7 @@
             "creator": "Michael Thompson"
         },
         {
+            "id": "4",
             "name": "Patchwork Quilt with Floral Patterns",
             "category": "Sewing",
             "description": "A cozy, hand-sewn patchwork quilt featuring vibrant floral patterns and soft, durable fabric. Perfect for chilly evenings.",
@@ -33,6 +37,7 @@
             "creator": "Sophia Martinez"
         },
         {
+            "id": "5",
             "name": "Crocheted Infinity Scarf",
             "category": "Crocheting",
             "description": "Soft and stylish infinity scarf made with 100% cotton yarn. Available in multiple colors and designs.",
@@ -41,6 +46,7 @@
             "creator": "Jessica Brown"
         },
         {
+            "id": "6",
             "name": "Custom 3D-Printed Minifigures",
             "category": "3D Printing",
             "description": "Personalized minifigures printed with high-quality PLA material. Choose your own designs, colors, and themes.",
@@ -49,6 +55,7 @@
             "creator": "Andrew Lee"
         },
         {
+            "id": "7",
             "name": "Hand-Painted Temple Artwork",
             "category": "Painting",
             "description": "A stunning painting of a temple landscape, created with vibrant watercolors and intricate brushwork.",
@@ -57,6 +64,7 @@
             "creator": "Rachel Kim"
         },
         {
+            "id": "8",
             "name": "Embroidered Baseball Hat",
             "category": "Embroidery",
             "description": "Custom-designed baseball hat with hand-stitched embroidery, including names, logos, or creative designs.",
@@ -65,6 +73,7 @@
             "creator": "Brian Wilson"
         },
         {
+            "id": "9",
             "name": "Elegant Handwritten Greeting Cards",
             "category": "Calligraphy",
             "description": "A set of personalized greeting cards featuring exquisite hand-drawn calligraphy and decorative elements.",
@@ -73,6 +82,7 @@
             "creator": "Olivia Davis"
         },
         {
+            "id": "10",
             "name": "Handcrafted Silver and Amethyst Ring",
             "category": "Jewelry",
             "description": "A delicate silver ring featuring a polished amethyst gemstone. Each piece is unique and crafted with care.",
