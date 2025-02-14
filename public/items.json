@@ -6,7 +6,7 @@
             "category": "Metalworking",
             "description": "Handcrafted silver-plated fork and spoon set with intricate floral engravings. Ideal for adding elegance to any dining table.",
             "price": 49.99,
-            "image": "",
+            "image": "/images/Silver-Plated Fork and Spoon.webp",
             "creator": "Emily Carter"
         },
         {
@@ -15,7 +15,7 @@
             "category": "Leatherworking",
             "description": "Premium leather book cover featuring hand-tooled designs and custom initials. Fits most standard-sized books and journals.",
             "price": 39.99,
-            "image": "",
+            "image": "/images/Hand-Stitched Leather Book Cover.webp",
             "creator": "Daniel Rivera"
         },
         {
@@ -24,7 +24,7 @@
             "category": "Woodworking",
             "description": "A lifelike bear sculpture crafted from reclaimed cherry wood, showcasing fine details and a smooth finish.",
             "price": 79.99,
-            "image": "",
+            "image": "/images/Hand-Carved Wooden Bear Sculpture.webp",
             "creator": "Michael Thompson"
         },
         {
@@ -33,7 +33,7 @@
             "category": "Sewing",
             "description": "A cozy, hand-sewn patchwork quilt featuring vibrant floral patterns and soft, durable fabric. Perfect for chilly evenings.",
             "price": 129.99,
-            "image": "",
+            "image": "/images/Patchwork Quilt with Floral Patterns.webp",
             "creator": "Sophia Martinez"
         },
         {
@@ -42,7 +42,7 @@
             "category": "Crocheting",
             "description": "Soft and stylish infinity scarf made with 100% cotton yarn. Available in multiple colors and designs.",
             "price": 24.99,
-            "image": "",
+            "image": "/images/Crocheted Infinity Scarf.webp",
             "creator": "Jessica Brown"
         },
         {
@@ -51,7 +51,7 @@
             "category": "3D Printing",
             "description": "Personalized minifigures printed with high-quality PLA material. Choose your own designs, colors, and themes.",
             "price": 19.99,
-            "image": "",
+            "image": "/images/Custom 3D-Printed Minifigures.webp",
             "creator": "Andrew Lee"
         },
         {
@@ -60,7 +60,7 @@
             "category": "Painting",
             "description": "A stunning painting of a temple landscape, created with vibrant watercolors and intricate brushwork.",
             "price": 199.99,
-            "image": "",
+            "image": "/images/Hand-Painted Temple Artwork.webp",
             "creator": "Rachel Kim"
         },
         {
@@ -69,7 +69,7 @@
             "category": "Embroidery",
             "description": "Custom-designed baseball hat with hand-stitched embroidery, including names, logos, or creative designs.",
             "price": 34.99,
-            "image": "",
+            "image": "/images/Embroidered Baseball Hat.webp",
             "creator": "Brian Wilson"
         },
         {
@@ -78,7 +78,7 @@
             "category": "Calligraphy",
             "description": "A set of personalized greeting cards featuring exquisite hand-drawn calligraphy and decorative elements.",
             "price": 14.99,
-            "image": "",
+            "image": "/images/Elegant Handwritten Greeting Cards.webp",
             "creator": "Olivia Davis"
         },
         {
@@ -87,7 +87,7 @@
             "category": "Jewelry",
             "description": "A delicate silver ring featuring a polished amethyst gemstone. Each piece is unique and crafted with care.",
             "price": 89.99,
-            "image": "",
+            "image": "/images/Handcrafted Silver and Amethyst Ring.webp",
             "creator": "William Scott"
         }
     ]
