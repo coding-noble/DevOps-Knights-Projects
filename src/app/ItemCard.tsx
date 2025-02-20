@@ -14,35 +14,15 @@ interface ItemCardProps {
 const ItemCard: React.FC<ItemCardProps> = ({ id, name, price, description, image, creator }) => {
     return (
         <Link href={`/item/${id}`} passHref>
-            <div
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    padding: "15px",
-                    margin: "10px",
-                    width: "600px",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    backgroundColor: "#fff",
-                }}
-            >
-                {/* Image Section */}
-                <div style={{ marginRight: "15px" }}>
-                    {image ? (
-                        <Image src={image} alt={name} width={80} height={80} />
-                    ) : (
-                        <div style={{ width: "80px", height: "80px", backgroundColor: "#eee" }} />
-                    )}
+            <div>
+                <div>
+                    {image ? <Image src={image} alt={name} width={100} height={100} /> : <div />}
                 </div>
-
-                {/* Text Content */}
-                <div style={{ flex: 1 }}>
-                    <h3 style={{ margin: "0", fontSize: "18px" }}>{name}</h3>
-                    <p style={{ margin: "5px 0", fontSize: "14px" }}>{description}</p>
-                    <p style={{ margin: "5px 0", fontWeight: "bold" }}>${price.toFixed(2)}</p>
-                    <p style={{ fontSize: "12px", color: "#555" }}>By {creator}</p>
+                <div>
+                    <h3>{name}</h3>
+                    <p>{description}</p>
+                    <p>${price.toFixed(2)}</p>
+                    <p>By {creator}</p>
                 </div>
             </div>
         </Link>
