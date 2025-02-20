@@ -34,36 +34,38 @@ const ThankYouPage = () => {
   };
 
   return (
-    <div>
+    <div style={pageContainer}>
       <Header />
 
-      <section>
-        <h2>Thank You</h2>
-        <p>Your order has been successfully placed!</p>
-      </section>
+      <div style={thankYouContainer}>
+        <section style={sectionStyle}>
+          <h2 style={title}>Thank You!</h2>
+          <p style={subtitle}>Your order has been successfully placed!</p>
+        </section>
 
-      <section>
-        <h3>Receipt Information:</h3>
-        <ul>
-          <li>Date: {currentDate}</li>
-          <li>Total: ${getTotal()}</li>
-        </ul>
-      </section>
+        <section style={sectionStyle}>
+          <h3 style={sectionTitle}>Receipt Information:</h3>
+          <ul style={listStyle}>
+            <li>Date: {currentDate}</li>
+            <li>Total: ${getTotal()}</li>
+          </ul>
+        </section>
 
-      <section>
-        <h3>Items Purchased:</h3>
-        <ul>
-          {cartItems.length > 0 ? (
-            cartItems.map((item) => (
-              <li key={item.id}>
-                {item.name} x{item.quantity} — ${(item.price * item.quantity).toFixed(2)}
-              </li>
-            ))
-          ) : (
-            <li>No items purchased.</li>
-          )}
-        </ul>
-      </section>
+        <section style={sectionStyle}>
+          <h3 style={sectionTitle}>Items Purchased:</h3>
+          <ul style={listStyle}>
+            {cartItems.length > 0 ? (
+              cartItems.map((item) => (
+                <li key={item.id} style={listItemStyle}>
+                  {item.name} <span style={quantityStyle}>x{item.quantity}</span> — ${(item.price * item.quantity).toFixed(2)}
+                </li>
+              ))
+            ) : (
+              <li style={listItemStyle}>No items purchased.</li>
+            )}
+          </ul>
+        </section>
+      </div>
 
       <Footer />
     </div>
@@ -77,3 +79,70 @@ export default function ThankYouPageWrapper() {
     </Suspense>
   );
 }
+
+// Styles
+const pageContainer: React.CSSProperties = {
+  backgroundColor: "#eadbcb",
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  padding: "20px",
+};
+
+const thankYouContainer: React.CSSProperties = {
+  width: "80%",
+  maxWidth: "800px",
+  backgroundColor: "#e3ceb9",
+  borderRadius: "12px",
+  padding: "20px",
+  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+  textAlign: "center",
+  marginBottom: "20px",
+};
+
+const sectionStyle: React.CSSProperties = {
+  marginBottom: "20px",
+  padding: "15px",
+  backgroundColor: "#dcc1a7",
+  borderRadius: "12px",
+  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+};
+
+const title: React.CSSProperties = {
+  fontSize: "32px",
+  fontWeight: "bold",
+  color: "#cda882",
+  marginBottom: "10px",
+};
+
+const subtitle: React.CSSProperties = {
+  fontSize: "18px",
+  color: "#333",
+  marginBottom: "10px",
+};
+
+const sectionTitle: React.CSSProperties = {
+  fontSize: "22px",
+  fontWeight: "bold",
+  color: "#cda882",
+  marginBottom: "10px",
+};
+
+const listStyle: React.CSSProperties = {
+  listStyleType: "none",
+  padding: 0,
+  margin: 0,
+  fontSize: "16px",
+  color: "#333",
+};
+
+const listItemStyle: React.CSSProperties = {
+  padding: "8px 0",
+  borderBottom: "1px solid #e3ceb9",
+};
+
+const quantityStyle: React.CSSProperties = {
+  fontWeight: "bold",
+  color: "#cda882",
+};

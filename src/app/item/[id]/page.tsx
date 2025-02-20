@@ -61,26 +61,127 @@ export default function ItemPage() {
         router.push("/checkout");
     };
 
-    if (!item) return <p>Loading item or item not found...</p>;
+    if (!item) return <p style={loadingText}>Loading item or item not found...</p>;
 
     return (
-        <div>
+        <div style={pageContainer}>
             <Header />
-            <div>
-                <div>
-                    <Image src={item.image} alt={item.name} />
-                    <h1>{item.name}</h1>
-                    <p>${item.price.toFixed(2)}</p>
-                    <div>
-                        <button onClick={addToCart}>Add to Cart</button>
-                        <button onClick={buyNow}>Buy Now</button>
+            <div style={itemContainer}>
+                <div style={imageContainer}>
+                    <Image src={item.image} alt={item.name} width={300} height={300} style={imageStyle} />
+                </div>
+                <div style={detailsContainer}>
+                    <h1 style={title}>{item.name}</h1>
+                    <p style={price}>${item.price.toFixed(2)}</p>
+                    <div style={buttonContainer}>
+                        <button style={addToCartButton} onClick={addToCart}>Add to Cart</button>
+                        <button style={buyNowButton} onClick={buyNow}>Buy Now</button>
                     </div>
                 </div>
-                <div>
-                    <p>{item.description}</p>
-                </div>
+            </div>
+            <div style={descriptionContainer}>
+                <p>{item.description}</p>
             </div>
             <Footer />
         </div>
     );
 }
+
+const pageContainer: React.CSSProperties = {
+    backgroundColor: '#eadbcb',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '20px',
+};
+
+const itemContainer: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '20px',
+    borderRadius: '12px',
+    backgroundColor: '#e3ceb9',
+    padding: '20px',
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+    width: '80%',
+    maxWidth: '1000px',
+    margin: '20px auto',
+};
+
+const imageContainer: React.CSSProperties = {
+    borderRadius: '12px',
+    overflow: 'hidden',
+    flexShrink: 0,
+};
+
+const imageStyle: React.CSSProperties = {
+    borderRadius: '12px',
+    objectFit: 'cover',
+};
+
+const detailsContainer: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: '10px',
+};
+
+const title: React.CSSProperties = {
+    fontSize: '32px',
+    fontWeight: 'bold',
+    color: '#cda882',
+    marginBottom: '10px',
+};
+
+const price: React.CSSProperties = {
+    fontSize: '24px',
+    color: '#d4b595',
+    marginBottom: '20px',
+};
+
+const buttonContainer: React.CSSProperties = {
+    display: 'flex',
+    gap: '10px',
+    marginTop: '10px',
+};
+
+const addToCartButton: React.CSSProperties = {
+    backgroundColor: '#dcc1a7',
+    border: 'none',
+    borderRadius: '8px',
+    padding: '10px 15px',
+    color: '#333',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    transition: 'background-color 0.2s',
+};
+
+const buyNowButton: React.CSSProperties = {
+    backgroundColor: '#cda882',
+    border: 'none',
+    borderRadius: '8px',
+    padding: '10px 15px',
+    color: '#fff',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    transition: 'background-color 0.2s',
+};
+
+const descriptionContainer: React.CSSProperties = {
+    backgroundColor: '#d4b595',
+    borderRadius: '12px',
+    padding: '20px',
+    width: '80%',
+    maxWidth: '1000px',
+    color: '#333',
+    marginBottom: '20px',
+    textAlign: 'center',
+};
+
+const loadingText: React.CSSProperties = {
+    color: '#cda882',
+    fontSize: '18px',
+    textAlign: 'center',
+    marginTop: '20px',
+};

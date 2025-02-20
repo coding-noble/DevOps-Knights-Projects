@@ -30,14 +30,14 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
+        <div style={homeContainerStyle}>
             <Header />
 
-            <div>
+            <div style={itemGridStyle}>
                 {items.length > 0 ? (
                     items.map((item) => <ItemCard key={item.id} {...item} />)
                 ) : (
-                    <p>Loading items...</p>
+                    <p style={loadingTextStyle}>Loading items...</p>
                 )}
             </div>
 
@@ -45,3 +45,24 @@ export default function Home() {
         </div>
     );
 }
+
+// Styles
+const homeContainerStyle: React.CSSProperties = {
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "20px",
+    fontFamily: "'Arial', sans-serif",
+};
+
+const itemGridStyle: React.CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+    gap: "20px",
+    marginTop: "20px",
+};
+
+const loadingTextStyle: React.CSSProperties = {
+    fontSize: "18px",
+    textAlign: "center",
+    color: "#cda882",
+};
